@@ -11,4 +11,3 @@ if(s==t):
     print("True")
 else:
     print("False")
-    
