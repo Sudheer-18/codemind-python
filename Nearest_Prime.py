@@ -1,11 +1,12 @@
 def isprime(n):
     c=0
-    if n==1:
-        return False
     for i in range(2,n):
-        if n%i==0:
-            return False
-    return True
+        if(n%i==0):
+            c=1
+            break
+    if(c==0):
+        return True
+    return False
 n=int(input())
 for k in range(1,n+1):
     m=int(input())
