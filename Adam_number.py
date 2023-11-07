@@ -1,19 +1,20 @@
-a=int(input())
-b=a*a
+n=int(input())  ##12
+sq=n*n  ##144
 s=0
-while(a!=0):
-    r=a%10
-    s=s*10+r
-    a=a//10
-c=s*s
-x=0
-while(c!=0):
-    e=c%10;
-    x=x*10+e
-    c=c//10
-if(x==b):
-    print("True")
-else :
-    print("False")
+while n!=0:
+    r=n%10
+    s=s*10+r   ##21
+    n//=10
+qs=s*s        ##441
 
+s1=0
+while qs!=0:
+    r=qs%10
+    s1=s1*10+r   ##144
+    qs//=10
+    
+if s1==sq:
+    print("True")
+else:
+    print("False")
     
