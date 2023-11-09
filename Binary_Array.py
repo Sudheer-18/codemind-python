@@ -1,11 +1,10 @@
 n=int(input())
-arr=list(map(int,input().split()))
+arrr=list(map(int,input().split()))
 c=0
-for i in arr:
-    if i==0 or i==1:
+for i in arrr:
+    if i==1 or i==0:
         c+=1
-if n==c:
+if c==n:
     print(True)
 else:
     print(False)
-    
