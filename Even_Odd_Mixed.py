@@ -1,26 +1,16 @@
-def odd(n):
-    if(n%2==0):
-        return False
-    return True
-def even(n):
-    if(n%2!=0):
-        return False
-    return True
-import math
 n=int(input())
-k=int(math.log10(n)+1)
-c=0
-dc=0
-while(n!=0):
+even_cnt=odd_cnt=0
+t=n
+while n!=0:
     r=n%10
+    if r!=0 and r%2==0:
+        even_cnt+=1
+    else:
+        odd_cnt+=1
     n//=10
-    if(odd(r)):
-        c+=1
-    elif(even(r)):
-        dc+=1
-if(c==k):
-    print("Odd")
-elif(dc==k):
+if even_cnt==len(str(t)):
     print("Even")
+elif odd_cnt==len(str(t)):
+    print("Odd")
 else:
     print("Mixed")
